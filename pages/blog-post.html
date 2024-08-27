@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
+
+  <!-- banner principal -->
+
   <header>
     <nav class="navbar navbar-dark navbar-expand-lg">
       <div class="container-fluid">
@@ -39,7 +42,11 @@
       </div>
     </nav>
   </header>
+
   <div class="wrapper-main-aside-footer">
+
+    <!-- sección principal, contiene el post del blog -->
+
     <main>
       <article class="blog-post">
         <div class="blog-header">
@@ -47,7 +54,7 @@
             Guía de viales de Resurgent Legends
           </h1>
           <p class="autor">Zones</p>
-          <img src="../img/sveonl.large.png" alt="portada de artículo">
+          <img src="../img/sveonl.large.png" alt="portada de artículo" aria-hidden="true">
           <p class="fecha">Diciembre 31, 2023</p>
         </div>
         <div class="blog-body">
@@ -77,20 +84,23 @@
         </div>
       </article>
     </main>
+
+    <!-- barra lateral/inferior con posts más recientes -->
+
     <aside>
       <div class="wrapper-aside-content">
         <h2>Blogs recientes</h2>
-        <div class="wrapper-blog-post">
+        <article>
           <h3>
-            <a href="blog-post.html">
+            <a href="pages/blog-post.html">
               Guía de viales de Resurgent Legends
             </a>
           </h3>
           <p class="extracto">
             ¡Fue lanzado Resurgent Legends! ¡Revisa esta guía práctica para saber cuales cartas son utilizadas en el meta actual!
           </p>
-        </div>
-        <div class="wrapper-blog-post">
+        </article>
+        <article>
           <h3>
             <a href="#">
               Compilación del Día 1 de Resurgent Legends (Rotación)
@@ -99,8 +109,8 @@
           <p class="extracto">
             La nueva expansión ya salió. Veamos qué se está jugando en en el ladder.
           </p>
-        </div>
-        <div class="wrapper-blog-post">
+        </article>
+        <article>
           <h3>
             <a href="#">
               Mermaid Commander: carta revelada de la expansión Resurgent Legends
@@ -109,13 +119,17 @@
           <p class="extracto">
             ¡Dale un vistazo a Mermaid Commander, una gran adición para Dracónico en la próxima expansión Resurgent Legends en Shadowverse! 
           </p>
-        </div>
+        </article>
       </div>
     </aside>
+
+    <!-- pie de página -->
+
     <footer class="page-footer">
       <p>SVES &copy; Todos los derechos reservados. | Sitio no afiliado con Cygames. Hecho por fans para fans.</p>
     </footer>
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

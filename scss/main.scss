@@ -24,6 +24,7 @@ $main-text-color: #fffff7ff;
 }
 
 a {
+  color: $main-text-color;
   &:link, &:visited, &:hover, &:active {
     text-decoration: none;
   }
@@ -74,39 +75,34 @@ header {
 }
 
 main {
-  padding: 1em 0em;
-  text-align: center;
+  max-width: 80em;
+  margin: 1em auto;
+
+  & > h1 {
+    text-align: center;
+  }
 
   p {
     padding: 1em;
-    max-width: 80em;
-    text-align: center;
+    text-align: left;
     margin: auto;
-  }
-
-  img {
-    max-height: 20em;
-    max-width: 20em;
   }
 }
 
 aside {
-  margin-top: 1em;
+  margin: 3em 0 0 0;
   color: $main-text-color;
   background-color: $main-color;
   padding: 1em;
   @include border-style;
   border-radius: 5px;
-  h3 a {
-    color: $main-text-color;
+  h3 {
+    font-size: 1.1em;
+    font-weight: bold;
   }
   img {
     max-width: 15em;
   }
-}
-
-.wrapper-blog-post {
-  padding: 1em 0em;
 }
 
 footer {
@@ -123,12 +119,23 @@ footer {
 
 // ----------
 
+// Estilos index
+
+.cuerpo-bienvenida  {
+  .portada-bienvenida {
+    width: 100%;
+  }
+}
+
+// ----------
+
 // Estilos guía
 
 .tabla-contenidos {
   @include border-style;
-  max-width: 50%;
-  margin: 1em auto;
+  margin: 1em 0;
+  max-width: 25em;
+
   text-align: left;
   .lista-contenidos {
     @include reset-list;
@@ -137,23 +144,25 @@ footer {
 
 .seccion-guias {
   padding: 1em 0;
-  margin: 0 0 2em 0;
+  margin: 0 auto
 }
 
 // ----------
 
 // Estilos blog
 
-div.container-blog-cards {
+.container-blog-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
   margin: 0 1em;
+  max-width: 100em;
 }
 
 article.blog-card {
   @include border-style;
   padding: 0 0 1em 0;
+  margin:auto;
   max-width: 640px;
   overflow: hidden;
 
@@ -242,20 +251,16 @@ article.blog-card {
     "ft ft ft ft ft ft";
   }
 
+  main {
+    grid-area: mn;
+  }
+
   aside {
     grid-area: as;
+    margin: 2em 0 0 0;
     .wrapper-aside-content{
       display: flex;
       flex-direction: column;
-    }
-  }
-
-  main {
-    grid-area: mn;
-    img {
-      max-height: 40em;
-      max-width: 80em;
-      padding: 2em 0;
     }
   }
 

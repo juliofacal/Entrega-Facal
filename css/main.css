@@ -17,6 +17,9 @@
   box-sizing: border-box;
 }
 
+a {
+  color: #fffff7;
+}
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }
@@ -58,37 +61,32 @@ header .nav-link {
 }
 
 main {
-  padding: 1em 0em;
+  max-width: 80em;
+  margin: 1em auto;
+}
+main > h1 {
   text-align: center;
 }
 main p {
   padding: 1em;
-  max-width: 80em;
-  text-align: center;
+  text-align: left;
   margin: auto;
-}
-main img {
-  max-height: 20em;
-  max-width: 20em;
 }
 
 aside {
-  margin-top: 1em;
+  margin: 3em 0 0 0;
   color: #fffff7;
   background-color: #14181c;
   padding: 1em;
   border: 1px solid #444b57;
   border-radius: 5px;
 }
-aside h3 a {
-  color: #fffff7;
+aside h3 {
+  font-size: 1.1em;
+  font-weight: bold;
 }
 aside img {
   max-width: 15em;
-}
-
-.wrapper-blog-post {
-  padding: 1em 0em;
 }
 
 footer {
@@ -102,10 +100,14 @@ footer p {
   margin: 1em;
 }
 
+.cuerpo-bienvenida .portada-bienvenida {
+  width: 100%;
+}
+
 .tabla-contenidos {
   border: 1px solid #444b57;
-  max-width: 50%;
-  margin: 1em auto;
+  margin: 1em 0;
+  max-width: 25em;
   text-align: left;
 }
 .tabla-contenidos .lista-contenidos {
@@ -116,19 +118,21 @@ footer p {
 
 .seccion-guias {
   padding: 1em 0;
-  margin: 0 0 2em 0;
+  margin: 0 auto;
 }
 
-div.container-blog-cards {
+.container-blog-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
   margin: 0 1em;
+  max-width: 100em;
 }
 
 article.blog-card {
   border: 1px solid #444b57;
   padding: 0 0 1em 0;
+  margin: auto;
   max-width: 640px;
   overflow: hidden;
 }
@@ -200,20 +204,16 @@ article.blog-card ul.entry-meta .fecha::before {
     grid-auto-rows: minmax(100px, auto);
     grid-template-areas: "as mn mn mn mn mn" ". mn mn mn mn mn" "ft ft ft ft ft ft";
   }
+  main {
+    grid-area: mn;
+  }
   aside {
     grid-area: as;
+    margin: 2em 0 0 0;
   }
   aside .wrapper-aside-content {
     display: flex;
     flex-direction: column;
-  }
-  main {
-    grid-area: mn;
-  }
-  main img {
-    max-height: 40em;
-    max-width: 80em;
-    padding: 2em 0;
   }
   footer {
     grid-area: ft;

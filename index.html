@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+
+  <!-- banner principal -->
+
   <header>
     <nav class="navbar navbar-dark navbar-expand-lg">
       <div class="container-fluid">
@@ -40,9 +43,12 @@
     </nav>
   </header>
   <div class="wrapper-main-aside-footer">
-    <main>
+
+    <!-- sección principal con la colección de posts del blog -->
+
+    <main class="cuerpo-bienvenida">
       <h1>Bienvenidos</h1>
-      <img src="img/sunandmoon.jpg" alt="portada de la sección, con imagen de Amateratsu y Tsukiyomi enfrentadas">
+      <img src="img/sunandmoon.jpg" alt="portada de la sección, con imagen de Amateratsu y Tsukiyomi enfrentadas" class="portada-bienvenida">
       <p>
         ¡Bienvenidos a SVES! Nacido de nuestra pasión por los juegos de cartas, creamos este espacio para compartir información, recursos y comunidad con otros aficionados.
       </p>
@@ -53,10 +59,13 @@
         Somos un equipo de dos amigos apasionados por los juegos de cartas, con años de experiencia jugando y coleccionando. Estamos emocionados de compartir este proyecto con ustedes y esperamos que disfruten de esta aventura tanto como nosotros.
       </p>
     </main>
+
+    <!-- sección lateral/inferior con posts más recientes -->
+
     <aside>
       <div class="wrapper-aside-content">
         <h2>Blogs recientes</h2>
-        <div class="wrapper-blog-post">
+        <article>
           <h3>
             <a href="pages/blog-post.html">
               Guía de viales de Resurgent Legends
@@ -65,8 +74,8 @@
           <p class="extracto">
             ¡Fue lanzado Resurgent Legends! ¡Revisa esta guía práctica para saber cuales cartas son utilizadas en el meta actual!
           </p>
-        </div>
-        <div class="wrapper-blog-post">
+        </article>
+        <article>
           <h3>
             <a href="#">
               Compilación del Día 1 de Resurgent Legends (Rotación)
@@ -75,8 +84,8 @@
           <p class="extracto">
             La nueva expansión ya salió. Veamos qué se está jugando en en el ladder.
           </p>
-        </div>
-        <div class="wrapper-blog-post">
+        </article>
+        <article>
           <h3>
             <a href="#">
               Mermaid Commander: carta revelada de la expansión Resurgent Legends
@@ -85,13 +94,17 @@
           <p class="extracto">
             ¡Dale un vistazo a Mermaid Commander, una gran adición para Dracónico en la próxima expansión Resurgent Legends en Shadowverse! 
           </p>
-        </div>
+        </article>
       </div>
     </aside>
+
+    <!-- pie de página -->
+
     <footer class="page-footer">
       <p>SVES &copy; Todos los derechos reservados. | Sitio no afiliado con Cygames. Hecho por fans para fans.</p>
     </footer>
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
