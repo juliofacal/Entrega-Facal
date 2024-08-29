@@ -1,14 +1,18 @@
+// Fuente y variables usadas para el documento
 @import "utilidades/font";
 @import "utilidades/variables";
 
-@import "partes/base";
+// Reset y estilos generales
+@import "paginas/base";
 
-@import "partes/header";
-@import "partes/main";
-@import "partes/aside";
-@import "partes/footer";
+// Estilos para secciones principales de las páginas
+@import "secciones/header";
+@import "secciones/main";
+@import "secciones/aside";
+@import "secciones/footer";
 
-@import "partes/index";
-@import "partes/guias";
-@import "partes/blog";
-@import "partes/comunidad";
+// Estilos para páginas específicas
+@import "paginas/index";
+@import "paginas/guias";
+@import "paginas/blog";
+@import "paginas/comunidad";

@@ -1,0 +1,39 @@
+/* Estilos para Main */
+
+main {
+  max-width: 1024px;
+  margin: 1em auto;
+  @include border-style;
+  padding: $padding-mobile;
+
+  & > h1 {
+    text-align: center;
+  }
+
+  p {
+    padding: 1em;
+    text-align: left;
+    margin: auto;
+  }
+
+  .portada-main {
+    margin: 0 calc($padding-mobile * -1);
+    width: calc(100% + ($padding-mobile * 2));
+    max-width: 1024px;
+  }
+}
+
+// Estilos para desktop
+
+@media screen and (min-width: 1200px) {
+  main {
+    margin: 2em auto;
+    padding: 2em;
+    grid-area: mn;
+
+    .portada-main {
+      margin: 0 calc($padding-desktop * -1);
+      width: calc(100% + ($padding-desktop*2));
+    }
+  }
+}

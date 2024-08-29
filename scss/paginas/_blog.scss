@@ -1,18 +1,17 @@
-// Estilos blog
+/* Estilos blog */
 
 .container-blog-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
-  margin: 0 1em;
-  max-width: 100em;
+  max-width: 80em;
 }
 
 article.blog-card {
   @include border-style;
   padding: 0 0 1em 0;
   margin:auto;
-  max-width: 640px;
+  max-width: 500px;
   overflow: hidden;
 
   img {

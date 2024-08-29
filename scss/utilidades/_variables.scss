@@ -4,6 +4,10 @@ $terciary-color: #444b57ff;
 $highlight-color: #3aa1f0ff;
 $main-text-color: #fffff7ff;
 
+$padding-mobile: 1em;
+$padding-tablet: 1em;
+$padding-desktop: 2em;
+
 @mixin border-style {
   border: 1px solid $terciary-color;
 }
