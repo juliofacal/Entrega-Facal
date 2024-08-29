@@ -1,0 +1,57 @@
+// Estilos blog
+
+.container-blog-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin: 0 1em;
+  max-width: 100em;
+}
+
+article.blog-card {
+  @include border-style;
+  padding: 0 0 1em 0;
+  margin:auto;
+  max-width: 640px;
+  overflow: hidden;
+
+  img {
+    margin: 0 0 1.5em 0;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 0 1em 0;
+    padding: 0 1em;
+  }
+
+  p.extracto {
+    padding: 1em;
+    font-style: italic;
+  }
+
+  ul.entry-meta {
+    @include reset-list;
+    display: flex;
+    padding: 0 1em;
+    gap: 1em;
+
+    .tag {
+      background-color: $highlight-color;
+      padding: 0 0.5em;
+      border-radius: 5px;
+    }
+
+    .autor:before {
+      content: "🖋️"
+    }
+
+    .fecha::before {
+      content: "🗓️";
+    }
+  }
+}

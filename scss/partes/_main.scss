@@ -1,0 +1,23 @@
+main {
+  max-width: 80em;
+  margin: 1em auto;
+  @include border-style;
+
+  & > h1 {
+    text-align: center;
+  }
+
+  p {
+    padding: 1em;
+    text-align: left;
+    margin: auto;
+  }
+}
+
+/* Estilos para desktop */
+
+@media screen and (min-width: 1200px) {
+  main {
+    grid-area: mn;
+  }
+}

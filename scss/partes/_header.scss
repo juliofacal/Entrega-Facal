@@ -1,0 +1,28 @@
+header {
+  text-align: center;
+  background-color: $secondary-color;
+  @include border-style;
+
+  img {
+    max-height: 80px;
+  }
+
+  .nav-link {
+    color: $main-text-color;
+  }
+}
+
+.navbar-nav {
+  margin: auto;
+  gap: 2.5em;
+  
+  .nav-link {
+    &:hover, &:focus {
+      color: $highlight-color;
+    }
+  }
+
+  .nav-link.active, .nav-link.show {
+    color: $highlight-color; 
+  }
+}

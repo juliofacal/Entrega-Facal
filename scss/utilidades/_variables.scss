@@ -1,0 +1,15 @@
+$main-color: #14181cff;
+$secondary-color: #20252bff;
+$terciary-color: #444b57ff;
+$highlight-color: #3aa1f0ff;
+$main-text-color: #fffff7ff;
+
+@mixin border-style {
+  border: 1px solid $terciary-color;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

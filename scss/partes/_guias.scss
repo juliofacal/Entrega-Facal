@@ -1,0 +1,30 @@
+// Estilos guía
+
+.tabla-contenidos {
+  @include border-style;
+  margin: 1em 0;
+  max-width: 25em;
+
+  text-align: left;
+  .lista-contenidos {
+    @include reset-list;
+  }
+}
+
+.seccion-guias {
+  padding: 1em 0;
+  margin: 0 auto
+}
+
+.pregunta {
+  font-weight: bold;
+  padding-bottom: 0;
+}
+
+.respuesta {
+  font-style: italic;
+  padding-top: 0;
+  ul {
+    font-style: italic;
+  }
+}

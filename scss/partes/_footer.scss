@@ -1,0 +1,20 @@
+footer {
+  min-height: 1em;
+  text-align: center;
+  color: $main-text-color;
+  @include border-style;
+
+  p {
+    vertical-align: auto;
+    margin: 1em;
+  }
+}
+
+/* Estilo para desktop */
+
+@media screen and (min-width: 1200px) {
+    footer {
+    grid-area: ft;
+    margin: 3em 0 0 0;
+  }
+}
