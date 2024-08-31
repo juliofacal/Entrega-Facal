@@ -1,10 +1,12 @@
 /* Estilos para Aside */
 
 aside {
+  height: fit-content;
   margin: 3em 0 0 0;
+  padding: 1em;
   color: $main-text-color;
   background-color: $main-color;
-  padding: 1em;
+
   @include border-style;
   border-radius: 5px;
 
@@ -36,7 +38,7 @@ aside {
 @media screen and (min-width: 1200px) {
   aside {
     grid-area: as;
-    margin: 2em 0 0 0;
+    margin: 2em 0 0 1em;
     display: flex;
     flex-direction: column;
   }

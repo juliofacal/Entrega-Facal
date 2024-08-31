@@ -13,11 +13,16 @@ article.blog-card {
   margin:auto;
   max-width: 500px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
   img {
     margin: 0 0 1.5em 0;
     padding: 0;
     max-width: 100%;
+    max-height: 125px;
+    object-fit: cover;
+    object-position: center;
   }
 
   h2 {
@@ -53,6 +58,10 @@ article.blog-card {
       content: "🗓️";
     }
   }
+  .card-footer {
+    align-self: flex-end;
+    margin: auto auto auto 0;
+  }
 }
 
 .blog-header {
@@ -60,9 +69,9 @@ article.blog-card {
   grid-template-columns: 2;
   grid-auto-rows: 3;
   grid-template-areas: 
-  "hd hd hd hd"
-  "bn bn bn bn"
-  "au au fe fe";
+  "hd hd"
+  "bn bn"
+  "au fe";
   h1 {
     grid-area: hd;
   }
@@ -89,4 +98,10 @@ article.blog-card {
 
 .vial {
   color: $vial-color;
+}
+
+@media screen and (min-width: 768px) {
+  article.blog-card {
+    height: 370px;
+  }
 }

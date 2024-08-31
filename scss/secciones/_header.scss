@@ -5,21 +5,25 @@ header {
   background-color: $secondary-color;
   @include border-style;
 
-  img {
-    max-height: 40px;
+  .navbar-brand {
+    img {
+      max-height: 40px;
+      margin: 0 1em 0 1em;
+    }
+
+    .brand-corto {
+      display:inline;
+    }
+  
+    .brand-largo {
+      display: none;
+    }
   }
 
   .nav-link {
     color: $main-text-color;
   }
 
-  .brand-corto {
-    display:inline;
-  }
-
-  .brand-largo {
-    display: none;
-  }
 }
 
 .navbar-nav {
@@ -42,11 +46,13 @@ header {
 
 @media screen and (min-width: 768px) {
   header {
-    .brand-corto {
-      display:none;
-    }
-    .brand-largo {
-      display: inline;
+    .navbar-brand {
+      .brand-corto {
+        display:none;
+      }
+      .brand-largo {
+        display: inline;
+      }
     }
   }
 }

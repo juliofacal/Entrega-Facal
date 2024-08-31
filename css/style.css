@@ -43,7 +43,7 @@ body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: minmax(100px, auto);
-    grid-template-areas: "as mn mn mn mn mn" ". mn mn mn mn mn" "ft ft ft ft ft ft";
+    grid-template-areas: "as mn mn mn mn mn" "ft ft ft ft ft ft";
   }
 }
 /* Estilos para Header */
@@ -52,17 +52,18 @@ header {
   background-color: #20252b;
   border: 1px solid #444b57;
 }
-header img {
+header .navbar-brand img {
   max-height: 40px;
+  margin: 0 1em 0 1em;
+}
+header .navbar-brand .brand-corto {
+  display: inline;
+}
+header .navbar-brand .brand-largo {
+  display: none;
 }
 header .nav-link {
   color: #fffff7;
-}
-header .brand-corto {
-  display: inline;
-}
-header .brand-largo {
-  display: none;
 }
 
 .navbar-nav {
@@ -77,10 +78,10 @@ header .brand-largo {
 }
 
 @media screen and (min-width: 768px) {
-  header .brand-corto {
+  header .navbar-brand .brand-corto {
     display: none;
   }
-  header .brand-largo {
+  header .navbar-brand .brand-largo {
     display: inline;
   }
 }
@@ -118,10 +119,11 @@ main .portada-main {
 }
 /* Estilos para Aside */
 aside {
+  height: fit-content;
   margin: 3em 0 0 0;
+  padding: 1em;
   color: #fffff7;
   background-color: #14181c;
-  padding: 1em;
   border: 1px solid #444b57;
   border-radius: 5px;
 }
@@ -146,7 +148,7 @@ aside article h3 {
 @media screen and (min-width: 1200px) {
   aside {
     grid-area: as;
-    margin: 2em 0 0 0;
+    margin: 2em 0 0 1em;
     display: flex;
     flex-direction: column;
   }
@@ -215,11 +217,16 @@ article.blog-card {
   margin: auto;
   max-width: 500px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 article.blog-card img {
   margin: 0 0 1.5em 0;
   padding: 0;
   max-width: 100%;
+  max-height: 125px;
+  object-fit: cover;
+  object-position: center;
 }
 article.blog-card h2 {
   text-transform: uppercase;
@@ -251,12 +258,16 @@ article.blog-card ul.entry-meta .autor:before {
 article.blog-card ul.entry-meta .fecha::before {
   content: "🗓️";
 }
+article.blog-card .card-footer {
+  align-self: flex-end;
+  margin: auto auto auto 0;
+}
 
 .blog-header {
   display: grid;
   grid-template-columns: 2;
   grid-auto-rows: 3;
-  grid-template-areas: "hd hd hd hd" "bn bn bn bn" "au au fe fe";
+  grid-template-areas: "hd hd" "bn bn" "au fe";
 }
 .blog-header h1 {
   grid-area: hd;
@@ -285,6 +296,11 @@ article.blog-card ul.entry-meta .fecha::before {
   color: #ff0000;
 }
 
+@media screen and (min-width: 768px) {
+  article.blog-card {
+    height: 370px;
+  }
+}
 /* Estilos Comunidad */
 
 /*# sourceMappingURL=style.css.map */
