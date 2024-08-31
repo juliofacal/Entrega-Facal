@@ -6,11 +6,19 @@ header {
   @include border-style;
 
   img {
-    max-height: 80px;
+    max-height: 40px;
   }
 
   .nav-link {
     color: $main-text-color;
+  }
+
+  .brand-corto {
+    display:inline;
+  }
+
+  .brand-largo {
+    display: none;
   }
 }
 
@@ -26,5 +34,19 @@ header {
 
   .nav-link.active, .nav-link.show {
     color: $highlight-color; 
+  }
+}
+
+
+// Estilo para tablet
+
+@media screen and (min-width: 768px) {
+  header {
+    .brand-corto {
+      display:none;
+    }
+    .brand-largo {
+      display: inline;
+    }
   }
 }

@@ -53,10 +53,16 @@ header {
   border: 1px solid #444b57;
 }
 header img {
-  max-height: 80px;
+  max-height: 40px;
 }
 header .nav-link {
   color: #fffff7;
+}
+header .brand-corto {
+  display: inline;
+}
+header .brand-largo {
+  display: none;
 }
 
 .navbar-nav {
@@ -70,6 +76,14 @@ header .nav-link {
   color: #3aa1f0;
 }
 
+@media screen and (min-width: 768px) {
+  header .brand-corto {
+    display: none;
+  }
+  header .brand-largo {
+    display: inline;
+  }
+}
 /* Estilos para Main */
 main {
   max-width: 1024px;
@@ -236,6 +250,39 @@ article.blog-card ul.entry-meta .autor:before {
 }
 article.blog-card ul.entry-meta .fecha::before {
   content: "🗓️";
+}
+
+.blog-header {
+  display: grid;
+  grid-template-columns: 2;
+  grid-auto-rows: 3;
+  grid-template-areas: "hd hd hd hd" "bn bn bn bn" "au au fe fe";
+}
+.blog-header h1 {
+  grid-area: hd;
+}
+.blog-header img {
+  grid-area: bn;
+}
+.blog-header p.autor {
+  grid-area: au;
+  margin-left: 0;
+}
+.blog-header p.fecha {
+  grid-area: fe;
+  margin-right: 0;
+}
+
+.mantener {
+  color: #008000;
+}
+
+.tal-vez {
+  color: #ffff00;
+}
+
+.vial {
+  color: #ff0000;
 }
 
 /* Estilos Comunidad */

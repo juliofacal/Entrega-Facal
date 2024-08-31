@@ -54,3 +54,39 @@ article.blog-card {
     }
   }
 }
+
+.blog-header {
+  display: grid;
+  grid-template-columns: 2;
+  grid-auto-rows: 3;
+  grid-template-areas: 
+  "hd hd hd hd"
+  "bn bn bn bn"
+  "au au fe fe";
+  h1 {
+    grid-area: hd;
+  }
+  img {
+    grid-area: bn;
+  }
+  p.autor {
+    grid-area: au;
+    margin-left: 0;
+  }
+  p.fecha {
+    grid-area: fe;
+    margin-right: 0;
+  }
+}
+
+.mantener {
+  color: $mantener-color;
+}
+
+.tal-vez {
+  color: $tal-vez-color;
+}
+
+.vial {
+  color: $vial-color;
+}
